@@ -11,8 +11,8 @@
 
 ;; Appearance
 (defconst user-setting-theme-package 'kaolin-themes)
-(defconst user-setting-theme 'kaolin-valley-light)
-(defconst user-setting-font "Monaco-11")
+(defconst user-setting-theme 'kaolin-light)
+(defconst user-setting-font "Monaco-12")
 (defconst user-setting-menu-bar-mode t)
 
 ;; System integration
