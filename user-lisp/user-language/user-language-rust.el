@@ -31,6 +31,7 @@
   (add-hook 'rust-mode-hook #'user-auto-fill-only-comments)
   (add-hook 'rust-mode-hook #'yas-minor-mode)
   :custom
+  (lsp-rust-server 'rust-analyzer)
   (rust-format-on-save t)
   (rust-indent-method-chain t))
 
