@@ -11,7 +11,7 @@
 
 (require 'user-completion)
 
-;;
+;; Window layout stack.
 (winner-mode t)
 
 ;; Buffer navigation.
@@ -35,15 +35,15 @@
 ;; Preview navigation to a line.
 (use-package goto-line-preview)
 
-;;
+;; Contextual actions.
 (use-package embark)
 
-;;
+;; Contextual actions completion integration.
 (use-package embark-consult
   :init
   (add-hook 'embark-collect-mode-hook #'consult-preview-at-point-mode))
 
-;;; Keyboard
+;;; Keyboard:
 
 (global-set-key (kbd "M-o") #'ace-window)
 (global-set-key (kbd "C-x C-b") #'bufler)
