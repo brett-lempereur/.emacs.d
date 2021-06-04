@@ -16,7 +16,6 @@
 ;; Additional stylesheet mode hooks
 (add-hook 'css-mode-hook #'auto-fill-mode)
 (add-hook 'css-mode-hook #'company-mode)
-(add-hook 'css-mode-hook #'company-quickhelp-mode)
 (add-hook 'css-mode-hook #'display-line-numbers-mode)
 (add-hook 'css-mode-hook #'eldoc-mode)
 (add-hook 'css-mode-hook #'electric-pair-mode)
@@ -39,7 +38,6 @@
   :init
   (add-hook 'typescript-mode-hook #'auto-fill-mode)
   (add-hook 'typescript-mode-hook #'company-mode)
-  (add-hook 'typescript-mode-hook #'company-quickhelp-mode)
   (add-hook 'typescript-mode-hook #'display-line-numbers-mode)
   (add-hook 'typescript-mode-hook #'eldoc-mode)
   (add-hook 'typescript-mode-hook #'electric-pair-mode)
@@ -70,7 +68,6 @@
   :init
   (add-hook 'web-mode-hook #'auto-fill-mode)
   (add-hook 'web-mode-hook #'company-mode)
-  (add-hook 'web-mode-hook #'company-quickhelp-mode)
   (add-hook 'web-mode-hook #'display-line-numbers-mode)
   (add-hook 'web-mode-hook #'eldoc-mode)
   (add-hook 'web-mode-hook #'electric-pair-mode)

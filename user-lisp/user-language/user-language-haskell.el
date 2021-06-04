@@ -17,7 +17,6 @@
   :init
   (add-hook 'haskell-mode-hook #'auto-fill-mode)
   (add-hook 'haskell-mode-hook #'company-mode)
-  (add-hook 'haskell-mode-hook #'company-quickhelp-mode)
   (add-hook 'haskell-mode-hook #'display-line-numbers-mode)
   (add-hook 'haskell-mode-hook #'electric-pair-mode)
   (add-hook 'haskell-mode-hook #'flycheck-mode)

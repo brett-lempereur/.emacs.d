@@ -16,7 +16,6 @@
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'emacs-lisp-mode-hook #'auto-fill-mode)
 (add-hook 'emacs-lisp-mode-hook #'company-mode)
-(add-hook 'emacs-lisp-mode-hook #'company-quickhelp-mode)
 (add-hook 'emacs-lisp-mode-hook #'display-line-numbers-mode)
 (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'emacs-lisp-mode-hook #'flycheck-mode)

@@ -17,7 +17,6 @@
 (add-hook 'lisp-mode-hook #'aggressive-indent-mode)
 (add-hook 'lisp-mode-hook #'auto-fill-mode)
 (add-hook 'lisp-mode-hook #'company-mode)
-(add-hook 'lisp-mode-hook #'company-quickhelp-mode)
 (add-hook 'lisp-mode-hook #'display-line-numbers-mode)
 (add-hook 'lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'lisp-mode-hook #'flycheck-mode)
@@ -32,7 +31,6 @@
   :init
   (add-hook 'slime-repl-mode-hook #'aggressive-indent-mode)
   (add-hook 'slime-repl-mode-hook #'company-mode)
-  (add-hook 'slime-repl-mode-hook #'company-quickhelp-mode)
   (add-hook 'slime-repl-mode-hook #'enable-paredit-mode)
   (add-hook 'slime-repl-mode-hook #'rainbow-delimiters-mode)
   (add-hook 'slime-repl-mode-hook #'yas-minor-mode)

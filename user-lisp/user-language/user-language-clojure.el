@@ -20,7 +20,6 @@
   (add-hook 'clojure-mode-hook #'auto-fill-mode)
   (add-hook 'clojure-mode-hook #'cider-mode)
   (add-hook 'clojure-mode-hook #'company-mode)
-  (add-hook 'clojure-mode-hook #'company-quickhelp-mode)
   (add-hook 'clojure-mode-hook #'display-line-numbers-mode)
   (add-hook 'clojure-mode-hook #'enable-paredit-mode)
   (add-hook 'clojure-mode-hook #'flycheck-mode)

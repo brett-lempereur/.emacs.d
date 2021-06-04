@@ -18,7 +18,6 @@
   :init
   (add-hook 'rust-mode-hook #'auto-fill-mode)
   (add-hook 'rust-mode-hook #'company-mode)
-  (add-hook 'rust-mode-hook #'company-quickhelp-mode)
   (add-hook 'rust-mode-hook #'display-line-numbers-mode)
   (add-hook 'rust-mode-hook #'eldoc-mode)
   (add-hook 'rust-mode-hook #'electric-pair-mode)

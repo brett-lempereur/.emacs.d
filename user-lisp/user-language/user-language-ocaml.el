@@ -18,7 +18,6 @@
   :init
   (add-hook 'tuareg-mode-hook #'auto-fill-mode)
   (add-hook 'tuareg-mode-hook #'company-mode)
-  (add-hook 'tuareg-mode-hook #'company-quickhelp-mode)
   (add-hook 'tuareg-mode-hook #'display-line-numbers-mode)
   (add-hook 'tuareg-mode-hook #'eldoc-mode)
   (add-hook 'tuareg-mode-hook #'electric-pair-mode)
@@ -51,7 +50,6 @@
   (add-hook 'dune-mode-hook #'auto-fill-mode)
   (add-hook 'dune-mode-hook #'cider-mode)
   (add-hook 'dune-mode-hook #'company-mode)
-  (add-hook 'dune-mode-hook #'company-quickhelp-mode)
   (add-hook 'dune-mode-hook #'display-line-numbers-mode)
   (add-hook 'dune-mode-hook #'enable-paredit-mode)
   (add-hook 'dune-mode-hook #'flycheck-mode)

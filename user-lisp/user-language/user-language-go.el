@@ -18,7 +18,6 @@
   :init
   (add-hook 'go-mode-hook #'auto-fill-mode)
   (add-hook 'go-mode-hook #'company-mode)
-  (add-hook 'go-mode-hook #'company-quickhelp-mode)
   (add-hook 'go-mode-hook #'display-line-numbers-mode)
   (add-hook 'go-mode-hook #'eldoc-mode)
   (add-hook 'go-mode-hook #'electric-pair-mode)

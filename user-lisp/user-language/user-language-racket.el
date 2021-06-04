@@ -19,7 +19,6 @@
   (add-hook 'racket-mode-hook #'aggressive-indent-mode)
   (add-hook 'racket-mode-hook #'auto-fill-mode)
   (add-hook 'racket-mode-hook #'company-mode)
-  (add-hook 'racket-mode-hook #'company-quickhelp-mode)
   (add-hook 'racket-mode-hook #'display-line-numbers-mode)
   (add-hook 'racket-mode-hook #'enable-paredit-mode)
   (add-hook 'racket-mode-hook #'flycheck-mode)

@@ -16,7 +16,6 @@
 ;; Additional minor modes for the Ruby language
 (add-hook 'ruby-mode-hook #'auto-fill-mode)
 (add-hook 'ruby-mode-hook #'company-mode)
-(add-hook 'ruby-mode-hook #'company-quickhelp-mode)
 (add-hook 'ruby-mode-hook #'display-line-numbers-mode)
 (add-hook 'ruby-mode-hook #'electric-pair-mode)
 (add-hook 'ruby-mode-hook #'electric-spacing-mode)

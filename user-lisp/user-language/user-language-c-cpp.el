@@ -16,7 +16,6 @@
 ;; Additional minor modes for the C language.
 (add-hook 'c-mode-hook #'auto-fill-mode)
 (add-hook 'c-mode-hook #'company-mode)
-(add-hook 'c-mode-hook #'company-quickhelp-mode)
 (add-hook 'c-mode-hook #'display-line-numbers-mode)
 (add-hook 'c-mode-hook #'electric-pair-mode)
 (add-hook 'c-mode-hook #'electric-spacing-mode)
@@ -31,7 +30,6 @@
 ;; Additional minor modes for the C++ language.
 (add-hook 'c++-mode-hook #'auto-fill-mode)
 (add-hook 'c++-mode-hook #'company-mode)
-(add-hook 'c++-mode-hook #'company-quickhelp-mode)
 (add-hook 'c++-mode-hook #'display-line-numbers-mode)
 (add-hook 'c++-mode-hook #'electric-pair-mode)
 (add-hook 'c++-mode-hook #'electric-spacing-mode)
