@@ -11,7 +11,7 @@
 
 ;; Appearance
 (defconst user-setting-theme-package 'kaolin-themes)
-(defconst user-setting-theme 'kaolin-light)
+(defconst user-setting-theme 'kaolin-temple)
 (defconst user-setting-font "Monaco-12")
 (defconst user-setting-menu-bar-mode t)
 

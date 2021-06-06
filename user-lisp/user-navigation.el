@@ -14,6 +14,14 @@
 ;; Window layout stack.
 (winner-mode t)
 
+;; Character and line navigation.
+(use-package avy
+  :custom
+  (avy-all-windows nil)
+  (avy-background t)
+  (avy-highlight-first t)
+  (avy-style 'de-bruijn))
+
 ;; Buffer navigation.
 (use-package bufler
   :custom
@@ -46,6 +54,8 @@
 ;;; Keyboard:
 
 (global-set-key (kbd "M-o") #'ace-window)
+(global-set-key (kbd "C-'") #'avy-goto-char-timer)
+(global-set-key (kbd "C-S-'") #'avy-goto-line)
 (global-set-key (kbd "C-x C-b") #'bufler)
 (global-set-key (kbd "C-x b") #'bufler-switch-buffer)
 (global-set-key (kbd "A-g g") #'goto-line-preview)
