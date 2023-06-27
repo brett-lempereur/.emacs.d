@@ -1,0 +1,13 @@
+###
+### .gitignore
+###
+
+# Remote packages and temporary scripts
+/remote-lisp
+/local
+
+# Session files created when emacs is closed by the window manager
+/.session.*
+
+# Tags
+/TAGS
