@@ -54,6 +54,12 @@
   :group 'user-settings
   :type '(repeat string))
 
+;; Organisation customisations
+(defcustom user-setting-notebook-path "~/Notes/"
+  "The path that contains notebooks."
+  :group 'user-settings
+  :type '(string))
+
 ;; Common LISP programming language customisations
 (defcustom user-setting-lisp-program nil
   "The path of the Common LISP executable on the machine."

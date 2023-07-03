@@ -1,0 +1,7 @@
+* %^{Title} [B]
+:PROPERTIES:
+:CREATED: %U
+:ATTENDEES: Brett
+:END:
+
+%?

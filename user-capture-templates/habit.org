@@ -1,0 +1,7 @@
+* TODO %^{Title} [B]
+SCHEDULED: <%t .+7d>
+:PROPERTIES:
+:CREATED: %U
+:END:
+
+%?

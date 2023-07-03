@@ -1,0 +1,6 @@
+* %^{Title}
+:PROPERTIES:
+:CREATED: %U
+:END:
+
+%?
