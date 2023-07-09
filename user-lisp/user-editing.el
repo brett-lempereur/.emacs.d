@@ -20,7 +20,7 @@
 ;; Auto-fill
 (setq-default comment-column 72)
 (setq-default comment-empty-lines t)
-(setq-default fill-column 72)
+(setq-default fill-column 79)
 
 ;; Indentation
 (setq-default indent-tabs-mode nil)
@@ -73,6 +73,26 @@
 ;; Allow languages to opt-in to hungry-deletion
 (use-package hungry-delete
   :commands hungry-delete-mode)
+
+;; Cleanup whitespace at the end of lines when saving
+(use-package ws-butler
+  :commands ws-butler-mode)
+
+;; Shortcut commands on selected text
+(use-package selected
+  :commands selected-minor-mode
+  :bind
+  ((:map selected-keymap
+         ("q" . selected-off)
+         ("u" . upcase-region)
+         ("d" . downcase-region)
+         ("c" . capitalize-region)
+         ("w" . count-words-region)
+         ("m" . apply-macro-to-region-lines))
+   (:map selected-org-mode-map
+         ("t" . org-table-convert-region)))
+  :init
+  (defvar selected-org-mode-map (make-sparse-keymap)))
 
 ;; Use a simple undo and redo system
 (use-package undo-tree

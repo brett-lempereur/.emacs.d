@@ -19,6 +19,7 @@
 (require 'user-completion)
 (require 'user-development)
 (require 'user-editing)
+(require 'user-notes)
 (require 'user-operating-system)
 
 ;; Programming languages

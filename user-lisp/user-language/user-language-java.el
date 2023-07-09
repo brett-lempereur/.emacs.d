@@ -2,7 +2,8 @@
 
 ;;; Commentary:
 
-;;
+;; Provides an integrated development environment for Java that uses the
+;; Eclipse JDT LSP for most functionality.
 
 ;;; Code:
 
@@ -27,6 +28,7 @@
 (add-hook 'java-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'java-mode-hook #'smartparens-mode)
 (add-hook 'java-mode-hook #'user-auto-fill-only-comments)
+(add-hook 'java-mode-hook #'ws-butler-mode)
 (add-hook 'java-mode-hook #'yas-minor-mode)
 
 ;; Language server protocol support

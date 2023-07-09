@@ -51,7 +51,14 @@
 ;; Contextual actions
 (use-package embark
   :bind
-  (("C-." . embark-act))
+  (("C-." . embark-act)
+   (:map embark-identifier-map
+         ("." . lsp-describe-thing-at-point)
+         ("E" . lsp-treemacs-errors-list)
+         ("R" . lsp-treemacs-references)
+         ("I" . lsp-treemacs-implementations)
+         ("H" . lsp-treemacs-call-hierarchy)
+         ("T" . lsp-treemacs-type-hierarchy)))
   :custom
   (embark-indicators '(embark-minimal-indicator))
   (embark-prompter #'embark-completing-read-prompter))

@@ -10,8 +10,6 @@
 
 ;; Appearance customisations
 (customize-set-variable 'user-setting-font "Monaco-13")
-(customize-set-variable 'user-setting-theme-package 'ample-theme)
-(customize-set-variable 'user-setting-theme 'ample-flat)
 (customize-set-variable 'user-setting-menu-bar-mode t)
 
 ;; Racket programming language customisations

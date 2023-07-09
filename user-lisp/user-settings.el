@@ -21,11 +21,11 @@
   "The font face to use for graphical frames."
   :group 'user-settings
   :type '(string))
-(defcustom user-setting-theme-package nil
+(defcustom user-setting-theme-package 'subatomic-theme
   "The package that contains the custom theme."
   :group 'user-settings
   :type '(choice (const :tag "None" nil) symbol))
-(defcustom user-setting-theme 'misterioso
+(defcustom user-setting-theme 'subatomic
   "The name of the custom theme."
   :group 'user-settings
   :type '(symbol))
@@ -57,6 +57,10 @@
 ;; Organisation customisations
 (defcustom user-setting-notebook-path "~/Notes/"
   "The path that contains notebooks."
+  :group 'user-settings
+  :type '(string))
+(defcustom user-setting-project-notebook-path "~/Notes/Projects"
+  "The path that contains project notebooks."
   :group 'user-settings
   :type '(string))
 

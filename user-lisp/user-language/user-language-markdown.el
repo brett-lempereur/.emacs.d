@@ -21,6 +21,11 @@
   (markdown-mode-hook . auto-fill-mode)
   (markdown-mode-hook . flycheck-mode)
   (markdown-mode-hook . flyspell-mode)
+  (markdown-mode-hook . rainbow-delimiters-mode)
+  (markdown-mode-hook . selected-minor-mode)
+  (markdown-mode-hook . smartparens-mode)
+  (markdown-mode-hook . ws-butler-mode)
+  (markdown-mode-hook . yas-minor-mode)
   :custom
   (markdown-asymmetric-header t)
   (markdown-command "multimarkdown")

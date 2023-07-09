@@ -24,13 +24,13 @@
 
 ;; Language server protocol client
 (use-package lsp-mode
-  :demand t
+  :commands (lsp lsp-deferred)
   :hook
   (lsp-mode-hook . lsp-enable-which-key-integration)
   :bind
   ("C-;" . lsp-describe-thing-at-point)
   ("C-," . lsp-find-definition)
-  ("C-S-," . lsp-find-references)
+  ("C-<" . lsp-treemacs-references)
   :custom
   (lsp-before-save-edits t)
   (lsp-enable-file-watchers t)
@@ -47,13 +47,27 @@
 
 ;; Debug adapter protocol client
 (use-package dap-mode
-  :demand t
+  :commands (dap-debug dap-debug-edit-template)
   :after lsp-mode
   :hook
   (dap-stopped-hook . user-dap-stopped-hook)
   :custom
   (dap-auto-configure-features '(sessions locals controls tooltip))
   (dap-auto-configure-mode))
+
+;; Tree view support
+(use-package treemacs)
+
+;; Support for browsing code structures in a tree view
+(use-package lsp-treemacs
+  :commands
+  (lsp-treemacs-errors-list
+   lsp-treemacs-references
+   lsp-treemacs-implementations
+   lsp-treemacs-call-hierarchy
+   lsp-treemacs-type-hierarchy)
+  :custom
+  (lsp-treemacs-error-list-current-project-only t))
 
 ;; Syntax checking and linting
 (use-package flycheck
@@ -70,10 +84,15 @@
 (use-package yasnippet
   :commands yas-minor-mode
   :bind
-  (("C-c y n" . yas-new-snippet)
+  (("C-c y e" . yas-expand)
+   ("C-c y n" . yas-new-snippet)
    ("C-c y ." . yas-next-field-or-maybe-expand)
    ("C-c y ," . yas-prev-field)
-   ("C-c y g" . yas-exit-snippet)))
+   ("C-c y g" . yas-exit-snippet))
+  :custom
+  (yas-snippet-dirs (list (locate-user-emacs-file "user-snippets")))
+  :config
+  (yas-reload-all))
 
 ;; Better paranthetical editing support
 (use-package smartparens
