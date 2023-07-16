@@ -91,10 +91,15 @@
 ;; Capture customisations
 (setq
  org-capture-templates
- `(("t" "Task" entry (file+olp "" "Tasks")
+ `(("t" "Task")
+   ("tp" "Project" (file+olp "Tasks.org" "Projects")
     (file ,(user-notes-capture-template "task.org")))
-   ("r" "Recurring Task" entry (file+olp "" "Recurring Tasks")
+   ("ta" "Event" (file+olp "Tasks.org" "Events")
+    (file ,(user-notes-capture-template "task.org")))
+   ("tr" "Recurring" entry (file+olp "Tasks.org" "Recurring")
     (file ,(user-notes-capture-template "habit.org")))
+   ("t," "Personal" (file+olp "Tasks.org" "Personal")
+    (file ,(user-notes-capture-template "task.org")))
    ("n" "Note" entry (file+olp "" "Notes")
     (file ,(user-notes-capture-template "note.org")))
    ("j" "Journal" entry (file+olp "" "Journal")

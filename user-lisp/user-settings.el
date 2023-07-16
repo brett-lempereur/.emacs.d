@@ -21,11 +21,11 @@
   "The font face to use for graphical frames."
   :group 'user-settings
   :type '(string))
-(defcustom user-setting-theme-package 'gruvbox-theme
+(defcustom user-setting-theme-package 'leuven-theme
   "The package that contains the custom theme."
   :group 'user-settings
   :type '(choice (const :tag "None" nil) symbol))
-(defcustom user-setting-theme 'gruvbox-dark-medium
+(defcustom user-setting-theme 'leuven
   "The name of the custom theme."
   :group 'user-settings
   :type '(symbol))
