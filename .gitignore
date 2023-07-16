@@ -2,6 +2,10 @@
 ### .gitignore
 ###
 
+# Allowlist machine-specific configurations
+user-machine/
+!user-machine-nagata.el
+
 # Remote packages and temporary scripts
 /remote-lisp
 /local
