@@ -59,10 +59,10 @@
   "The path that contains notebooks."
   :group 'user-settings
   :type '(string))
-(defcustom user-setting-project-notebook-path "~/Notes/Projects"
-  "The path that contains project notebooks."
+(defcustom user-setting-notebook-projects nil
+  "The list of projects documented in user notebooks."
   :group 'user-settings
-  :type '(string))
+  :type '(repeat string))
 
 ;; Common LISP programming language customisations
 (defcustom user-setting-lisp-program nil

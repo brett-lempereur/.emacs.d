@@ -21,63 +21,13 @@
   (interactive)
   (find-file org-default-notes-file))
 
-(defun user-notes-find-project-notebook (name)
-  "Visit the notebook for project NAME."
-  (interactive
-   (list
-    (completing-read
-     "Project: "
-     (mapcar #'file-name-base (user-glob
-                               user-setting-project-notebook-path
-                               "*.org")))))
-  (let ((file (concat user-setting-project-notebook-path "/" name ".org")))
-    (find-file file)))
+(defun user-notes-capture-template (name)
+  "Return the path of capture of template NAME."
+  (locate-user-emacs-file (format "user-capture-templates/%s.org" name)))
 
-(defun user-notes-capture-templates ()
-  "Return capture templates for all active notebooks."
-  (append
-   (user-notes-project-capture-templates "" "")
-   (list (list "p" "Projects"))
-   (cl-mapcan
-    (lambda (prefix name)
-      (cons (list (concat "p" prefix) (file-name-base name))
-            (user-notes-project-capture-templates (concat "p" prefix) name)))
-    (user-lowercase-letters)
-    (user-glob user-setting-project-notebook-path "*.org"))))
-
-(defun user-notes-project-capture-templates (prefix name)
-  "Return capture templates for project NAME with key PREFIX."
-  (list
-   (list
-    (concat prefix "t") "Task" 'entry
-    (list 'file+olp name "Tasks")
-    (list 'file (locate-user-emacs-file "user-capture-templates/task.org"))
-    :empty-lines 1)
-   (list
-    (concat prefix "r") "Recurring Task" 'entry
-    (list 'file+olp name "Recurring Tasks")
-    (list 'file (locate-user-emacs-file "user-capture-templates/habit.org"))
-    :empty-lines 1)
-   (list
-    (concat prefix "n") "Note" 'entry
-    (list 'file+olp name "Notes")
-    (list 'file (locate-user-emacs-file "user-capture-templates/note.org"))
-    :empty-lines 1)
-   (list
-    (concat prefix "j") "Journal" 'entry
-    (list 'file+olp+datetree name "Journal")
-    (list 'file (locate-user-emacs-file "user-capture-templates/journal.org"))
-    :empty-lines 1)
-   (list
-    (concat prefix "m") "Meeting" 'entry
-    (list 'file+olp+datetree name "Journal")
-    (list 'file (locate-user-emacs-file "user-capture-templates/meeting.org"))
-    :empty-lines 1)))
-
-(defun user-notes-watch-projects (event)
-  "Handle notification EVENT in the project notebook path."
-  (when (member (cadr event) '(created deleted renamed))
-    (setq org-capture-templates (user-notes-capture-templates))))
+(defun user-notes-current-archive-file ()
+  "Return the path of the current archive file."
+  (concat org-directory "Archive/" (format-time-string "%Y") ".org"))
 
 ;; Hooks for notebook buffers
 (add-hook 'org-mode-hook #'auto-fill-mode)
@@ -98,10 +48,8 @@
 (global-set-key (kbd "C-c n a") #'org-agenda)
 (global-set-key (kbd "C-c n t") #'org-todo-list)
 (global-set-key (kbd "C-c n l") #'org-store-link)
-(global-set-key (kbd "C-c n b") #'org-switchb)
 (global-set-key (kbd "C-c n g") #'consult-org-agenda)
 (global-set-key (kbd "C-c n f") #'user-notes-find-notebook)
-(global-set-key (kbd "C-c n p") #'user-notes-find-project-notebook)
 
 ;; Local keybindings
 (define-key org-mode-map (kbd "M-g h") #'consult-org-heading)
@@ -109,9 +57,7 @@
 ;; File discovery customisations
 (setq org-directory (file-name-as-directory user-setting-notebook-path))
 (setq org-default-notes-file (concat org-directory "Notebook.org"))
-(setq org-agenda-files
-      (list org-directory
-            (file-name-as-directory user-setting-project-notebook-path)))
+(setq org-agenda-files (list org-directory))
 
 ;; Property customisations
 (setq org-columns-default-format "%20ITEM %TODO %TYPE %3PRIORITY %SIZE %TAGS")
@@ -142,18 +88,25 @@
 (setq org-agenda-start-on-weekday nil)
 (setq org-agenda-todo-list-sublevels nil)
 
-;; Watch for changes in the project directory
-(file-notify-add-watch user-setting-project-notebook-path
-                       '(change)
-                       #'user-notes-watch-projects)
-
-;; Set the initial list of capture templates.
-(setq org-capture-templates (user-notes-capture-templates))
-
-;; Archiving
+;; Capture customisations
 (setq
- org-archive-location
- (concat org-directory "Archive/" (format-time-string "%Y") ".org"))
+ org-capture-templates
+ `(("t" "Task" entry (file+olp "" "Tasks")
+    (file ,(user-notes-capture-template "task.org")))
+   ("r" "Recurring Task" entry (file+olp "" "Recurring Tasks")
+    (file ,(user-notes-capture-template "habit.org")))
+   ("n" "Note" entry (file+olp "" "Notes")
+    (file ,(user-notes-capture-template "note.org")))
+   ("j" "Journal" entry (file+olp "" "Journal")
+    (file ,(user-notes-capture-template "journal.org")))
+   ("m" "Meeting" entry (file+olp "" "Journal")
+    (file ,(user-notes-capture-template "meeting.org")))))
+
+;; Archive customisations
+(setq org-archive-location (user-notes-current-archive-file))
+
+;; Tag customisations
+(setq org-tag-persistent-alist (mapcar #'list user-setting-notebook-projects))
 
 (provide 'user-notes)
 ;;; user-notes.el ends here
