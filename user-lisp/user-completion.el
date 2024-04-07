@@ -13,11 +13,15 @@
 ;; Text and programming language completion
 (use-package company
   :commands (company-mode)
+  :hook
+  ((company-mode-hook . company-box-mode))
   :custom
   (company-auto-commit nil)
   (company-minimum-prefix-length 1)
   (company-show-numbers t)
   (company-idle-delay 0.1))
+(use-package company-box
+  :commands (company-box-mode))
 
 ;; Better incremental narrowing
 (use-package vertico
