@@ -27,7 +27,6 @@
 (require 'user-language-emacs-lisp)
 (require 'user-language-go)
 (require 'user-language-haskell)
-(require 'user-language-java)
 (require 'user-language-racket)
 (require 'user-language-rust)
 
