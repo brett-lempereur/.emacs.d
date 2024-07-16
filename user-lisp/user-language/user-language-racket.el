@@ -40,7 +40,6 @@
   (racket-repl-mode-hook . smartparens-mode)
   (racket-repl-mode-hook . smartparens-strict-mode)
   (racket-repl-mode-hook . yas-minor-mode)
-  (racket-xp-mode-hook . user-racket-xp-hide-annotations)
   :custom
   (racket-program user-setting-racket-program)
   (racket-xp-after-change-refresh-delay 1))

@@ -25,8 +25,6 @@
   (haskell-literate-mode-hook . company-mode)
   (haskell-literate-mode-hook . display-line-numbers-mode)
   (haskell-literate-mode-hook . electric-pair-mode)
-  (haskell-literate-mode-hook . flycheck-mode)
-  (haskell-literate-mode-hook . flyspell-prog-mode)
   (haskell-literate-mode-hook . haskell-decl-scan-mode)
   (haskell-literate-mode-hook . haskell-doc-mode)
   (haskell-literate-mode-hook . haskell-indentation-mode)
@@ -40,8 +38,6 @@
   (haskell-mode-hook . company-mode)
   (haskell-mode-hook . display-line-numbers-mode)
   (haskell-mode-hook . electric-pair-mode)
-  (haskell-mode-hook . flycheck-mode)
-  (haskell-mode-hook . flyspell-prog-mode)
   (haskell-mode-hook . haskell-decl-scan-mode)
   (haskell-mode-hook . haskell-doc-mode)
   (haskell-mode-hook . haskell-indentation-mode)
@@ -59,6 +55,8 @@
   (haskell-process-suggest-remove-import-lines t)
   (haskell-process-type 'cabal-repl)
   (haskell-stylish-on-save t))
+
+(use-package lsp-haskell)
 
 (provide 'user-language-haskell)
 ;;; user-language-haskell.el ends here
