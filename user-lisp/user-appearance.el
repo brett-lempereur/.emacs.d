@@ -55,7 +55,7 @@
 (when (display-graphic-p)
   (fringe-mode '(10 . 10)))
 
-;; Improve the appearance of the modeline
+;; Improve the appearance of the modeline.
 (use-package spaceline
   :custom
   (powerline-default-separator 'nil)
@@ -68,7 +68,7 @@
   (spaceline-toggle-purpose-off)
   (spaceline-toggle-hud-off))
 
-;; Highlight the current line when moving between pages
+;; Highlight the current line when moving between pages.
 (use-package pulsar
   :hook
   (next-error-hook . pulsar-pulse-line)
@@ -80,6 +80,10 @@
   (pulsar-highlight-face 'pulsar-yellow)
   :config
   (pulsar-global-mode 1))
+
+;; Highlight the current symbol when idle.
+(use-package idle-highlight-mode
+  :commands idle-highlight-mode)
 
 (provide 'user-appearance)
 ;;; user-appearance.el ends here

@@ -27,6 +27,7 @@
   (racket-mode-hook . flyspell-prog-mode)
   (racket-mode-hook . format-all-mode)
   (racket-mode-hook . hl-todo-mode)
+  (racket-mode-hook . idle-highlight-mode)
   (racket-mode-hook . prettify-symbols-mode)
   (racket-mode-hook . racket-xp-mode)
   (racket-mode-hook . rainbow-delimiters-mode)

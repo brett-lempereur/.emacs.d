@@ -23,6 +23,7 @@
 (add-hook 'lisp-mode-hook #'flycheck-mode)
 (add-hook 'lisp-mode-hook #'flyspell-prog-mode)
 (add-hook 'lisp-mode-hook #'hl-todo-mode)
+(add-hook 'lisp-mode-hook #'idle-highlight-mode)
 (add-hook 'lisp-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'lisp-mode-hook #'slime-mode)
 (add-hook 'lisp-mode-hook #'smartparens-mode)

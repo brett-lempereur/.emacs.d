@@ -21,6 +21,7 @@
 (add-hook 'emacs-lisp-mode-hook #'flycheck-mode)
 (add-hook 'emacs-lisp-mode-hook #'flyspell-prog-mode)
 (add-hook 'emacs-lisp-mode-hook #'hl-todo-mode)
+(add-hook 'emacs-lisp-mode-hook #'idle-highlight-mode)
 (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'emacs-lisp-mode-hook #'smartparens-mode)
 (add-hook 'emacs-lisp-mode-hook #'show-smartparens-mode)

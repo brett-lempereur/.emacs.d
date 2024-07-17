@@ -26,6 +26,7 @@
   (go-mode-hook . flyspell-prog-mode)
   (go-mode-hook . hl-todo-mode)
   (go-mode-hook . hungry-delete-mode)
+  (go-mode-hook . idle-highlight-mode)
   (go-mode-hook . lsp)
   (go-mode-hook . rainbow-delimiters-mode)
   (go-mode-hook . user-auto-fill-only-comments)
