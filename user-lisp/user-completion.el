@@ -14,7 +14,8 @@
 (use-package company
   :commands (company-mode)
   :hook
-  ((company-mode-hook . company-box-mode))
+  (company-mode-hook . company-box-mode)
+  (company-mode-hook . company-quickhelp-mode)
   :custom
   (company-auto-commit nil)
   (company-minimum-prefix-length 1)
@@ -22,6 +23,8 @@
   (company-idle-delay 0.1))
 (use-package company-box
   :commands (company-box-mode))
+(use-package company-quickhelp
+  :commands (company-quickhelp-mode))
 
 ;; Better incremental narrowing
 (use-package vertico
