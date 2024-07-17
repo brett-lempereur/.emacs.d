@@ -68,5 +68,18 @@
   (spaceline-toggle-purpose-off)
   (spaceline-toggle-hud-off))
 
+;; Highlight the current line when moving between pages
+(use-package pulsar
+  :hook
+  (next-error-hook . pulsar-pulse-line)
+  :custom
+  (pulsar-pulse t)
+  (pulsar-delay 0.055)
+  (pulsar-iterations 10)
+  (pulsar-face 'pulsar-magenta)
+  (pulsar-highlight-face 'pulsar-yellow)
+  :config
+  (pulsar-global-mode 1))
+
 (provide 'user-appearance)
 ;;; user-appearance.el ends here
