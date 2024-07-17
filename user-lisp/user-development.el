@@ -191,6 +191,12 @@
   :hook
   (ag-mode . winnow-mode))
 
+;; Developer documentation
+(use-package devdocs
+  :commands (devdocs-lookup)
+  :bind
+  ("C-h ," . devdocs-lookup))
+
 ;;; Hooks:
 
 (defun user-dap-stopped-hook ()

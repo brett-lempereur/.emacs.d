@@ -97,7 +97,6 @@
 ;; Extension and replacement shortcut commands
 (use-package crux
   :bind
-  ("C-k" . crux-smart-kill-line)
   ("C-S-RET" . crux-smart-open-line-above)
   ("S-RET" . crux-smart-open-line)
   ("C-c b c" . crux-cleanup-buffer-or-region)

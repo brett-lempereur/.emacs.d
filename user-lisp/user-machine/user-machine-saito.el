@@ -9,10 +9,10 @@
 (require 'user-settings)
 
 ;; Appearance customisations
-(customize-set-variable 'user-setting-font "Source Code Pro-13")
+(customize-set-variable 'user-setting-font "Source Code Pro-14")
 (customize-set-variable 'user-setting-menu-bar-mode t)
-(customize-set-variable 'user-setting-theme-package 'acme-theme)
-(customize-set-variable 'user-setting-theme 'acme)
+(customize-set-variable 'user-setting-theme-package 'nano-theme)
+(customize-set-variable 'user-setting-theme 'nano-dark)
 
 ;; Racket programming language customisations
 (customize-set-variable 'user-setting-racket-program "/opt/racket/bin/racket")
