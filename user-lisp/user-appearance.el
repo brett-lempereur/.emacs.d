@@ -68,6 +68,9 @@
   (spaceline-toggle-purpose-off)
   (spaceline-toggle-hud-off))
 
+;; Interactive menus.
+(use-package hydra)
+
 ;; Highlight the current line when moving between pages.
 (use-package pulsar
   :hook
