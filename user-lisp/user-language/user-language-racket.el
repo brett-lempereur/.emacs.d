@@ -42,8 +42,7 @@
   (racket-repl-mode-hook . smartparens-strict-mode)
   (racket-repl-mode-hook . yas-minor-mode)
   :custom
-  (racket-program user-setting-racket-program)
-  (racket-xp-after-change-refresh-delay 1))
+  (racket-program user-setting-racket-program))
 
 ;; Documentation editing
 (use-package scribble-mode

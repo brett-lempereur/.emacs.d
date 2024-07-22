@@ -8,7 +8,17 @@
 
 ;;; Code:
 
+(require 'comp)
 (require 'package)
+
+;; Configure native compilation.
+(customize-set-variable 'native-comp-async-query-on-exit t)
+(customize-set-variable 'native-comp-async-report-warnings-errors 'silent)
+
+;; Native compilation
+(when (boundp 'native-comp-eln-load-path)
+  (startup-redirect-eln-cache
+   (expand-file-name "local/eln-cache" user-emacs-directory)))
 
 ;; Never load site-specific files
 (setq inhibit-default-init t)
