@@ -40,6 +40,9 @@
 ;; Markup languages
 (require 'user-language-markdown)
 
+;; Local packages
+(require 'aoc)
+
 ;; Local and non-version-controlled customisation
 (setq custom-file (no-littering-expand-etc-file-name "custom.el"))
 (when (file-exists-p custom-file) (load custom-file))

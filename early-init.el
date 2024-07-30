@@ -58,6 +58,7 @@
 (add-to-list 'load-path (locate-user-emacs-file "user-lisp"))
 (add-to-list 'load-path (locate-user-emacs-file "user-lisp/user-machine"))
 (add-to-list 'load-path (locate-user-emacs-file "user-lisp/user-language"))
+(add-to-list 'load-path (locate-user-emacs-file "user-lisp/user-packages"))
 
 (provide 'early-init)
 ;;; early-init.el ends here
