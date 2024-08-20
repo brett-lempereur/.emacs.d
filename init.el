@@ -30,6 +30,7 @@
 (require 'user-language-haskell)
 (require 'user-language-racket)
 (require 'user-language-rust)
+(require 'user-language-swift)
 
 ;; Structured data languages
 (require 'user-language-csv)
