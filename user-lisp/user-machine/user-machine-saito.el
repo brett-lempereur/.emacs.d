@@ -17,5 +17,17 @@
 ;; Racket programming language customisations
 (customize-set-variable 'user-setting-racket-program "/opt/racket/bin/racket")
 
+;; Load the path from the shell.
+(use-package exec-path-from-shell
+  :config
+  (exec-path-from-shell-initialize))
+
+;; Anthropic API key.
+(customize-set-variable
+ 'claude-api-key
+ (with-temp-buffer
+   (insert-file-contents "~/.anthropic-key")
+   (string-trim (buffer-string))))
+
 (provide 'user-machine-saito)
 ;;; user-machine-saito.el ends here
