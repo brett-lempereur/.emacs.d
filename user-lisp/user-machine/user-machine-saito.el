@@ -24,7 +24,7 @@
 
 ;; Anthropic API key.
 (customize-set-variable
- 'claude-api-key
+ 'smarter-api-key
  (with-temp-buffer
    (insert-file-contents "~/.anthropic-key")
    (string-trim (buffer-string))))

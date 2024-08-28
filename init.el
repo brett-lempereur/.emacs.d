@@ -43,7 +43,7 @@
 
 ;; Local packages
 (require 'aoc)
-(require 'claude)
+(require 'smarter)
 
 ;; Local and non-version-controlled customisation
 (setq custom-file (no-littering-expand-etc-file-name "custom.el"))
