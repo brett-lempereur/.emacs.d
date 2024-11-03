@@ -1,5 +1,7 @@
 # .emacs.d
 
+*This repository is archived, see [emacs.g](https://github.com/brett-lempereur/emacs.g) for its replacement.*
+
 Portable editor configuration for development tasks.
 
 ## Installation
